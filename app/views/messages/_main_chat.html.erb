@@ -12,37 +12,7 @@
 </div>
 
 <div class="messages">
-  <div class="chat">
-    <div class="upper-chat">
-      <div class="chat-user">
-        Jin
-      </div>
-      <div class="chat-time">
-        2022/3/29(Tue) 15:55:55
-      </div>
-    </div>
-    <div class="lower-chat">
-      <div class="chat-message">
-        Good afternoon!
-      </div>
-    </div>
-  </div>
-
-  <div class="chat">
-    <div class="upper-chat">  
-      <div class="chat-user">
-        Ben
-      </div>
-      <div class="chat-time">
-        2022/3/29(Tue) 20:33:33
-      </div>
-    </div>
-    <div class="lower-chat">
-      <div class="chat-message">
-        Good evening!
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 

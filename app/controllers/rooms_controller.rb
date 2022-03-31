@@ -4,6 +4,17 @@ class RoomsController < ApplicationController
   end
 
   def create
+    @room = Room.new(room_params)
+    if @room.save #ルーム作成に成功すればトップページに、失敗すればnewのページに
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
+  private
+
+  def room_params
+    params.require(:room).permit(:name, user_ids: [])
+  end
 end
